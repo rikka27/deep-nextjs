@@ -18,15 +18,9 @@ const Home: NextPage = () => {
             <main className={styles.main}>
                 <h1 className={styles.title}>
                     Welcome to
-                    <a href="https://nextjs.org">
-                        Next.js!
-                        {
-                            (process.env.PRIVATE_VARIABLE,
-                            process.env.NEXT_PUBLIC_PRIVATE_VARIABLE)
-                        }
-                    </a>
+                    <a href="https://nextjs.org">Next.js!</a>
                 </h1>
-
+                <code>ENV: `{process.env.NEXT_PUBLIC_TEXT}`</code>
                 <p className={styles.description}>
                     Get started by editing
                     <code className={styles.code}>pages/index.tsx</code>

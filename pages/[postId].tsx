@@ -11,7 +11,9 @@ const Post: NextPage<{ ctx: GetStaticPropsContext }> = ({ ctx }) => {
     return (
         <div>
             <h1>post</h1>
-            <pre>{JSON.stringify(ctx, null, 4)}</pre>
+            <code>
+                <pre>{JSON.stringify(ctx, null, 4)}</pre>
+            </code>
         </div>
     );
 };
@@ -27,7 +29,7 @@ export const getStaticPaths: GetStaticPaths = async (
 export const getStaticProps: GetStaticProps = async (
     ctx: GetStaticPropsContext
 ) => {
-    return { props: { ctx } };
+    return { props: { ctx, key: Math.random() } };
 };
 
 export default Post;
