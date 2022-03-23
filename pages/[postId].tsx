@@ -19,6 +19,8 @@ const Post: NextPage<{ ctx: GetStaticPropsContext }> = ({ ctx }) => {
 export const getStaticPaths: GetStaticPaths = async (
     ctx: GetStaticPathsContext
 ) => {
+    console.log(ctx);
+
     return { paths: [], fallback: 'blocking' };
 };
 
