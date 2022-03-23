@@ -7,12 +7,12 @@ import {
 } from 'next';
 import React from 'react';
 
-const Post: NextPage<{ ctx: GetStaticPropsContext }> = ({ ctx }) => {
+const Post: NextPage<{ ctx: GetStaticPropsContext }> = (props) => {
     return (
         <div>
             <h1>post</h1>
             <code>
-                <pre>{JSON.stringify(ctx, null, 4)}</pre>
+                <pre>{JSON.stringify(props, null, 4)}</pre>
             </code>
         </div>
     );
